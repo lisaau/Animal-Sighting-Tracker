@@ -1,6 +1,6 @@
 import React from 'react';
 import {TextField, MenuItem, Button} from '@material-ui/core/';
-
+import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 
 const health = [
     {
@@ -34,7 +34,7 @@ export default class AddSightingForm extends React.Component {
   
         return(
             <div style={{paddingTop: '2%'}}>
-            <form 
+            <ValidatorForm 
                 onSubmit={ e => {
                     e.preventDefault();
                     this.props.onAddSighting(
@@ -82,15 +82,19 @@ export default class AddSightingForm extends React.Component {
                             </MenuItem>
                         ))}
                     </TextField>
-                    <TextField 
-                        style={{ margin: '1%' }}
+                    <br/>
+                    <TextValidator 
+                        style={{ margin: '1%', width: '315px' }}
                         id="standard-required" 
                         label="Email" 
                         helperText="Please input your email in case we need to contact you"
+                        value={this.state.email}
+                        validators={['isEmail']}
+                        errorMessages={['Email is not Valid']}
                         onChange={ e => this.setState({email: e.target.value})}/>
                 </div>
                     <Button variant="outlined" type='submit'>Add Sighting</Button>
-            </form>
+            </ValidatorForm>
             </div>
         )
     }

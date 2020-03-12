@@ -29,4 +29,3 @@ Full stack app from Techtonica's [PERN project assignment](https://github.com/Te
 
 Once both servers are running (Express on port 3000 and React on 3001), open [http://localhost:3001](http://localhost:3001/) to view it in the browser.
 
-![image-20200311231212674](/Users/tpl619_2/Library/Application Support/typora-user-images/image-20200311231212674.png)

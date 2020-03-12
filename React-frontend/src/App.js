@@ -52,7 +52,6 @@ class App extends React.Component {
     .then(res => res.json())
     .then(res => {
       console.log('res of animals', typeof res, res);
-      // this.setState({ sightings: res })
       res.map( animal => dropdown.push(Object.assign({}, {value:`${animal.animal_id}`, label:`${animal.nickname} - ${animal.common_name}`} )));
       this.setState({dropdown: dropdown});
     });
@@ -63,7 +62,6 @@ class App extends React.Component {
     this.fetchAnimalsForDropdown();
   }
 
- 
 
   render() {
     return (

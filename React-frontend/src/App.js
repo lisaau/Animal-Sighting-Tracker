@@ -28,18 +28,19 @@ class App extends React.Component {
     });
   }
 
+  onAddSighting = async (animal_id, health, location, email) => {
+    await addSighting(animal_id, health, location, email);
+    let sightingsArray = await fetchSightings();
+    this.setState({sightings: sightingsArray })
+}
+
   render() {
     return (
       <Container maxWidth="md" style={{backgroundColor:'#F5F5F5'}}>
         <Banner />
         <div className="App">
           <AddSightingForm 
-            onAddSighting={ 
-              async (animal_id, health, location, email) => {
-                await addSighting(animal_id, health, location, email);
-                let sightingsArray = await fetchSightings();
-                this.setState({sightings: sightingsArray })
-            }}
+            onAddSighting={this.onAddSighting}
             dropdown={this.state.dropdown}
           />
           <DisplaySighting sightings={this.state.sightings}/>

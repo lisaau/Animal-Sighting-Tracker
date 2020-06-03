@@ -29,7 +29,7 @@ There is a one-to-many relationship between the animals and sightings entities a
 
 #### Database:
 
-1. Set up the database using PostgreSQL. Make sure you have [PostgreSQL](https://wiki.postgresql.org/wiki/Homebrew) installed, which can be installed using [homebrew](https://brew.sh/). Take the eventonica.sql file and restore the database by running:
+1. Set up the database using PostgreSQL. Make sure you have [PostgreSQL](https://wiki.postgresql.org/wiki/Homebrew) installed, which can be installed using [homebrew](https://brew.sh/). To get the database set up, take the `animaltrackerdb.sql` file and restore the database by running:
 
    ```
    createdb animaltrackerdb
@@ -38,7 +38,7 @@ There is a one-to-many relationship between the animals and sightings entities a
 
 #### Express server:
 
-1. Start with `npm install` to install necessary dependencies in the 'express-backend' folder.
+1. Start with `npm install` to install necessary dependencies in the "express-backend" folder.
 2. Run the Express server by running `node index.js`
 
 #### React frontend:
@@ -52,3 +52,10 @@ There is a one-to-many relationship between the animals and sightings entities a
 
 Once both servers are running (Express on port 3000 and React on 3001), open [http://localhost:3001](http://localhost:3001/) to view it in the browser.
 
+
+
+## Future Features
+
+- Sorting the data in each column of the table
+- Pagination for data table
+- Visualization of the data

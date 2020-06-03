@@ -15,14 +15,14 @@ export default function DisplaySighting(props) {
                     </TableRow>
                     </TableHead>
                     <TableBody>
-                    {props.sightings.map(row => (
-                        <TableRow key={row.nickname}>
-                            <TableCell>{row.nickname}</TableCell>
-                            <TableCell align="right">{row.common_name}</TableCell>
-                            <TableCell align="right">{row.health}</TableCell>
-                            <TableCell align="right">{row.location}</TableCell>
-                        </TableRow>
-                    ))}
+                        {props.sightings.map(row => (
+                            <TableRow key={row.nickname}>
+                                <TableCell>{row.nickname}</TableCell>
+                                <TableCell align="right">{row.common_name}</TableCell>
+                                <TableCell align="right">{row.health}</TableCell>
+                                <TableCell align="right">{row.location}</TableCell>
+                            </TableRow>
+                        ))}
                     </TableBody>
                 </Table>
             </TableContainer>

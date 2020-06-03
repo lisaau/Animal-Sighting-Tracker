@@ -30,8 +30,6 @@ export default class AddSightingForm extends React.Component {
     }
 
     render() {
-        console.log(this.state.animal_id, this.state.location, this.state.health, this.state.email, this.props);
-  
         return(
             <div style={{paddingTop: '2%'}}>
             <ValidatorForm 
@@ -56,7 +54,7 @@ export default class AddSightingForm extends React.Component {
                         >
                         {this.props.dropdown.map(option => (
                             <MenuItem key={option.value} value={option.value}>
-                            {option.label}
+                                {option.label}
                             </MenuItem>
                         ))}
                     </TextField>
@@ -78,7 +76,7 @@ export default class AddSightingForm extends React.Component {
                         >
                         {health.map(option => (
                             <MenuItem key={option.value} value={option.value}>
-                            {option.label}
+                                {option.label}
                             </MenuItem>
                         ))}
                     </TextField>

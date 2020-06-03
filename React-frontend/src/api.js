@@ -11,10 +11,10 @@ export function addSighting(animal_id, health, location, email) {
             'Accept': 'application/json'
             },
         body: JSON.stringify({
-        'animal_id': animal_id,
-        'health': health,
-        'location': location,
-        'email': email
+            'animal_id': animal_id,
+            'health': health,
+            'location': location,
+            'email': email
         })
     })
     .then(res => res.json())
